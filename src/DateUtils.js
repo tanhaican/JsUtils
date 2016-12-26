@@ -33,8 +33,6 @@
         /**
          * 求两个时间的天数差（一个入参，则跟当前时间比）
          * 参数为Date或者String类型，String类型日期格式支持 [YYYY-MM-dd | YYYY/MM/DD | YYYYMMDD]
-         * @param dateOne
-         * @param dateTwo
          * @returns {number}
          */
         daysBetween: function() {
@@ -71,8 +69,8 @@
          * @returns {boolean}
          */
         isDateStr: function(str) {
-            if ( DateStaticFun.FORMAT_A_REG.test(str) || DateStaticFun.FORMAT_B_REG.test(obj)
-                || DateStaticFun.FORMAT_C_REG.test(str) ) {
+            if ( DateStaticFun.FORMAT_A_REG.test(str) || DateStaticFun.FORMAT_B_REG.test(str) ||
+                DateStaticFun.FORMAT_C_REG.test(str) ) {
                 return true;
             } else {
                 return false;
@@ -89,11 +87,11 @@
         isLeapYear: function(date) {
             if(DateStaticFun.isDate(date)) {
                 var year;
-                if(!date instanceof  Date) {
+                if(!(date instanceof  Date)) {
                     date = DateStaticFun.strToDate(date);
                 }
                 year = date.getFullYear();
-                return (0 == year % 4 && ((year % 100 != 0) || (year % 400 == 0)));
+                return (0 === year % 4 && ((year % 100 !== 0) || (year % 400 === 0)));
             } else {
                 throw '非日期字符串或者Date类型参数';
             }
@@ -141,11 +139,9 @@
             str=str.replace(/s|S/g,this.getSeconds());
 
             return str;
-        },
+        }
     };
     var DateFun = {
-
-
         //+---------------------------------------------------
         //| 日期计算
         // q: 季度

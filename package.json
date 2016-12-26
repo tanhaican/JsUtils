@@ -1,0 +1,25 @@
+{
+  "name": "JsUtils",
+  "version": "1.0.0",
+  "description": "Some useful Utils for Javascript",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanhaican/JsUtils.git"
+  },
+  "author": {
+    "name": "tanhaican",
+    "email": "tanhaica@126.com"
+  },
+  "license": "Apache License",
+  "devDependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.8.11",
+    "del": "^2.2.2",
+    "gulp-uglify": "^1.5.3",
+    "gulp-rename": "^1.2.2",
+    "jshint": "^2.9.4",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.0.0"
+  }
+}
